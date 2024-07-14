@@ -7,7 +7,7 @@ function App() {
   const [items, setItems] = useState([]);
   const saveItems = (item) => {
     setItems((prevItems) => {
-      const newItm={...item,id:prevItems.length+1};
+      const newItm = { ...item, id: prevItems.length + 1 };
       console.log(newItm);
       return [...prevItems, newItm];
     })
@@ -15,14 +15,14 @@ function App() {
   const preVal = (val) => {
     setItems((prevItems) => {
       return prevItems.map((item) =>
-        item.id === val.id ? { ...item, [val.size]:item[val.size]-1 } : item
+        item.id === val.id ? { ...item, [val.size]: item[val.size] - 1 } : item
       );
     });
   };
   return (<AppcontextProvider>
     <Fragment>
+      <Cart />
       <Seller onaddProduct={saveItems} />
-      <Cart/>
       <Buyer ondisplay={items} preserveVal={preVal} />
     </Fragment>
   </AppcontextProvider>
