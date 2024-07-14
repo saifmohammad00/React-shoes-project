@@ -29,5 +29,4 @@ function App() {
   </AppcontextProvider>
   );
 }
-
 export default App;
