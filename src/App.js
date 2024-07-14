@@ -23,7 +23,7 @@ function App() {
   return (<AppcontextProvider>
     <Fragment>
       <Seller onaddProduct={saveItems} />
-      <Cart/>
+      <Cart />
       <Buyer ondisplay={items} preserveVal={preVal} />
     </Fragment>
   </AppcontextProvider>
