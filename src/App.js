@@ -14,7 +14,6 @@ function App() {
   }
   const preVal = (val) => {
     setItems((prevItems) => {
-      // Use map to create a new array with the updated item
       return prevItems.map((item) =>
         item.id === val.id ? { ...item, [val.size]:item[val.size]-1 } : item
       );
